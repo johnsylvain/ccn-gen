@@ -15,7 +15,7 @@ class App extends Component {
       cardDetails: {
         ccn: null,
         exp: null,
-        cvc: null,
+        ccv: null,
         name: null
       }
     }
@@ -35,7 +35,14 @@ class App extends Component {
 
   render() {
     return <div className="App">
-      <CreditCard type={this.state.cardType} details={this.state.cardDetails} />
+      <div className="App__CC">
+        <CreditCard type={this.state.cardType} details={this.state.cardDetails} />
+      </div>
+      <div className="App__body">
+        <h3>Credit Card Number</h3>
+        <h3>Expiration Date</h3>
+        <h3>CCV</h3>
+      </div>
     </div>
   }
 }
