@@ -17,11 +17,15 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'react-hot-loader!babel-loader'
+                loader: 'babel-loader'
             },
             {
                 test: /\.(scss|css)$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                loaders: [ 
+                  'style-loader', 
+                  'css-loader',
+                  'sass-loader', 
+                ]
             }
         ]
     },

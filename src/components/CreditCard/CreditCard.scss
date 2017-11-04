@@ -1,0 +1,102 @@
+.CreditCard {
+  max-width: 380px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: linear-gradient(45deg,#f46b45, #eea849);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: monospace;
+  display: grid;
+  grid-row: repeat(3, 1fr);
+  position: relative;
+
+  &::before {
+    background: url('https://image.flaticon.com/icons/svg/44/44386.svg') no-repeat center;
+    background-size: cover;
+    opacity: .05;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  & > div {
+    padding: 1.3rem 0.5rem;
+  }
+
+  .CreditCard__header {
+    margin-bottom: 0.5rem;
+    padding: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .CreditCard__header--right {
+      text-align: right;
+    }
+
+    .chip {
+      position: absolute;
+      width: 60px;
+      height: 45px;
+      background: linear-gradient(135deg, hsl(269,54%,87%) 0%,hsl(200,64%,89%) 44%,hsl(18,55%,94%) 100%);;
+      border-radius: 8px;
+      top: 0;
+      left: 0;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 4px solid hsla(0, 0, 50, .1);
+        width: 70%;
+        height: 60%;
+        border-radius: 5px;
+      }
+    }
+
+    svg {
+      fill: white;
+    }
+  }
+
+  .CreditCard__ccn {
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+
+    span:not(:last-child) {
+      margin-right: 1ch;
+    }
+  }
+
+  .CreditCard__details {
+    display: grid;
+    padding: 0 inherit;
+    grid-template-columns: repeat(2, 1fr); 
+
+    .title {
+      color: rgba(white, 0.7);
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .value {
+      font-size: 1.1rem;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);    
+    }
+
+
+    .CreditCard__details--right {
+      text-align: right;
+    }
+  }
+}

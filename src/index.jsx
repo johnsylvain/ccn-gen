@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-const App = () => (<div>
-  <h1>Credit Card Generator</h1>
-</div>);
+import App from './components/App/';
+
+import './style.scss';
 
 render(<App />, document.getElementById('app'));
