@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import faker from 'faker/locale/en';
 
 import CreditCard from '../CreditCard';
+import { ccngen } from '../../utils/ccnGenerator';
 // import Button from './Button';
 
 import './App.scss';
@@ -24,7 +25,8 @@ class App extends Component {
   _generateCard(type) {
     this.setState({
       cardDetails: {
-        name: faker.name.findName()
+        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        ccn: ccngen(type)
       }
     })
   }

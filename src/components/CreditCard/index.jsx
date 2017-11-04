@@ -52,15 +52,12 @@ const CreditCard = ({ details, type }) =>
       </div>
     </div>
     <div className="CreditCard__ccn">
-      <span>4593</span>
-      <span>7545</span>
-      <span>3342</span>
-      <span>0650</span>
+      {details.ccn.map(d => <span>{d}</span>)}
     </div>
     <div className="CreditCard__details">
       <div>
         <span className="title">Card Holder</span>
-        <span className="value">John Sylvain</span>
+        <span className="value">{details.name}</span>
       </div>
       <div className="CreditCard__details--right">
         <span className="title">Expires</span>

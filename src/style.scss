@@ -42,6 +42,8 @@ table {
 	border-spacing: 0;
 }
 
+* {box-sizing: border-box}
+
 body {
 	background: linear-gradient(50deg, #f3c680, hsla(179,54%,76%,1));
 	min-height: 100vh;
