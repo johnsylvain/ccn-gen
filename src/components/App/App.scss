@@ -1,8 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .App {
   max-width: 768px;  
-  margin: 0 auto;
+  width: 100%;
   position: relative;
-  margin-top: 200px;
   color: #2c3e50;
   background-color: white;
   border-radius: 5px;
@@ -10,10 +16,11 @@
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
   
   .App__CC {
-    transform: translate(-50px, -50px);
+    transform: translate(-50px, 0px);
   }
 
   .App__sidebar {
+    margin-left: -20px;
     pre {
       font-family: monospace;
       background: #efefef;
@@ -31,7 +38,8 @@
   
   .App__body {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 245px;
+    padding: 1rem;
   }
 
   .App__footer {
@@ -39,6 +47,7 @@
     grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid #efefef;
     padding-top: 1rem;
+    margin-top: 1rem;
 
     button {
       border: 0;

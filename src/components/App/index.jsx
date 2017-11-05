@@ -53,24 +53,28 @@ class App extends Component {
   }
 
   render() {
-    return <div className="App">
-      <div className="App__body">
-        <div className="App__CC">
-          <CreditCard type={this.state.cardType} details={this.state.cardDetails} />
+    return <div className="container">
+      <div className="App">
+        <div className="App__body">
+          <div className="App__CC">
+            <CreditCard type={this.state.cardType} details={this.state.cardDetails} />
+          </div>
+          <div className="App__sidebar">
+            <h3>Credit Card Number</h3>
+            <pre>{this.state.cardDetails.ccn}</pre>
+            <h3>Card Holder</h3>
+            <pre>{this.state.cardDetails.name}</pre>
+            <h3>Expiration Date</h3>
+            <pre>{this.state.cardDetails.exp}</pre>          
+            <h3>CCV</h3>
+            <pre>{this.state.cardDetails.cvv}</pre>          
+          </div>
         </div>
-        <div className="App__sidebar">
-          <h3>Credit Card Number</h3>
-          <pre>{this.state.cardDetails.ccn}</pre>
-          <h3>Expiration Date</h3>
-          <pre>{this.state.cardDetails.exp}</pre>          
-          <h3>CCV</h3>
-          <pre>{this.state.cardDetails.cvv}</pre>          
+        <div className="App__footer">
+          <Button value="Generate Visa" onClick={this._handleClick('VISA')}/>
+          <Button value="Generate Mastercard" onClick={this._handleClick('Mastercard')}/>
+          <Button value="Generate American Express" onClick={this._handleClick('American Express')}/>
         </div>
-      </div>
-      <div className="App__footer">
-        <Button value="Generate Visa" onClick={this._handleClick('VISA')}/>
-        <Button value="Generate Mastercard" onClick={this._handleClick('Mastercard')}/>
-        <Button value="Generate American Express" onClick={this._handleClick('American Express')}/>
       </div>
     </div>
   }
