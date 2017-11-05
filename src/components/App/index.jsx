@@ -32,6 +32,7 @@ class App extends Component {
     }
 
     this.setState({
+      cardType: type,
       cardDetails: {
         name: `${faker.name.firstName()} ${faker.name.lastName()}`,
         ccn: ccngen(type),
