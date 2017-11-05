@@ -33,7 +33,7 @@ const CreditCard = ({ details, type }) =>
       </div>
     </div>
     <div className="CreditCard__ccn">
-      {formatCCN(details.ccn)}
+      {details.ccn}
     </div>
     <div className="CreditCard__details">
       <div>
