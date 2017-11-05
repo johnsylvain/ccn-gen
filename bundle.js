@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "19451ff262aca34fe55a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7f704b93b6a5022f9311"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1308,7 +1308,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, ".App{max-width:768px;margin:0 auto;position:relative;margin-top:200px;color:#2c3e50;background-color:#fff;border-radius:5px;padding:1rem;box-shadow:0 4px 20px -2px rgba(0,0,0,.1)}.App .App__CC{transform:translate(-50px,-50px)}.App .App__sidebar pre{font-family:monospace;background:#efefef;padding:.6rem;color:#555;border-radius:3px;margin-bottom:1rem}.App .App__sidebar h3{font-weight:700;font-size:.7rem;margin-bottom:.5rem}.App .App__body{display:grid;grid-template-columns:1fr 250px}.App .App__footer{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #efefef;padding-top:1rem}.App .App__footer button{border:0;outline:0;background-color:#fff;font-size:.825rem;padding:1rem;display:block;color:#2c3e50;cursor:pointer}.App .App__footer button:hover{color:salmon}", ""]);
+exports.push([module.i, ".container{display:flex;align-items:center;justify-content:center;height:100vh}.App{max-width:768px;width:100%;position:relative;color:#2c3e50;background-color:#fff;border-radius:5px;padding:1rem;box-shadow:0 4px 20px -2px rgba(0,0,0,.1)}.App .App__CC{transform:translate(-50px)}.App .App__sidebar{margin-left:-20px}.App .App__sidebar pre{font-family:monospace;background:#efefef;padding:.6rem;color:#555;border-radius:3px;margin-bottom:1rem}.App .App__sidebar h3{font-weight:700;font-size:.7rem;margin-bottom:.5rem}.App .App__body{display:grid;grid-template-columns:1fr 245px;padding:1rem}.App .App__footer{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #efefef;padding-top:1rem;margin-top:1rem}.App .App__footer button{border:0;outline:0;background-color:#fff;font-size:.825rem;padding:1rem;display:block;color:#2c3e50;cursor:pointer}.App .App__footer button:hover{color:salmon}", ""]);
 
 // exports
 
@@ -11753,56 +11753,70 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'App' },
+        { className: 'container' },
         _react2.default.createElement(
           'div',
-          { className: 'App__body' },
+          { className: 'App' },
           _react2.default.createElement(
             'div',
-            { className: 'App__CC' },
-            _react2.default.createElement(_CreditCard2.default, { type: this.state.cardType, details: this.state.cardDetails })
+            { className: 'App__body' },
+            _react2.default.createElement(
+              'div',
+              { className: 'App__CC' },
+              _react2.default.createElement(_CreditCard2.default, { type: this.state.cardType, details: this.state.cardDetails })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'App__sidebar' },
+              _react2.default.createElement(
+                'h3',
+                null,
+                'Credit Card Number'
+              ),
+              _react2.default.createElement(
+                'pre',
+                null,
+                this.state.cardDetails.ccn
+              ),
+              _react2.default.createElement(
+                'h3',
+                null,
+                'Card Holder'
+              ),
+              _react2.default.createElement(
+                'pre',
+                null,
+                this.state.cardDetails.name
+              ),
+              _react2.default.createElement(
+                'h3',
+                null,
+                'Expiration Date'
+              ),
+              _react2.default.createElement(
+                'pre',
+                null,
+                this.state.cardDetails.exp
+              ),
+              _react2.default.createElement(
+                'h3',
+                null,
+                'CCV'
+              ),
+              _react2.default.createElement(
+                'pre',
+                null,
+                this.state.cardDetails.cvv
+              )
+            )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'App__sidebar' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Credit Card Number'
-            ),
-            _react2.default.createElement(
-              'pre',
-              null,
-              this.state.cardDetails.ccn
-            ),
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Expiration Date'
-            ),
-            _react2.default.createElement(
-              'pre',
-              null,
-              this.state.cardDetails.exp
-            ),
-            _react2.default.createElement(
-              'h3',
-              null,
-              'CCV'
-            ),
-            _react2.default.createElement(
-              'pre',
-              null,
-              this.state.cardDetails.cvv
-            )
+            { className: 'App__footer' },
+            _react2.default.createElement(_Button2.default, { value: 'Generate Visa', onClick: this._handleClick('VISA') }),
+            _react2.default.createElement(_Button2.default, { value: 'Generate Mastercard', onClick: this._handleClick('Mastercard') }),
+            _react2.default.createElement(_Button2.default, { value: 'Generate American Express', onClick: this._handleClick('American Express') })
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'App__footer' },
-          _react2.default.createElement(_Button2.default, { value: 'Generate Visa', onClick: this._handleClick('VISA') }),
-          _react2.default.createElement(_Button2.default, { value: 'Generate Mastercard', onClick: this._handleClick('Mastercard') }),
-          _react2.default.createElement(_Button2.default, { value: 'Generate American Express', onClick: this._handleClick('American Express') })
         )
       );
     }
