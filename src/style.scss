@@ -44,8 +44,8 @@ table {
 
 * {box-sizing: border-box}
 
-body {
+html {
 	background: linear-gradient(50deg, #f3c680, hsla(179,54%,76%,1));
-	min-height: 100vh;
+	height: 100vh;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }

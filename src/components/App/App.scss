@@ -1,28 +1,58 @@
 .App {
-  max-width: 490px;  
+  max-width: 768px;  
   margin: 0 auto;
   position: relative;
-  margin-top: 50px;
+  margin-top: 200px;
   color: #2c3e50;
-
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+  
   .App__CC {
-    margin-bottom: -100px;
+    transform: translate(-50px, -50px);
   }
 
-  .App__body {
-    background-color: white;
-    border-radius: 5px;
-    padding: 1rem;
-    padding-top: 130px;
-    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
-
+  .App__sidebar {
+    pre {
+      font-family: monospace;
+      background: #efefef;
+      padding: 0.6rem;
+      color: #555555;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+    }
     h3 {
-      font-weight: 500;
-      font-size: 0.9rem;
+      font-weight: 700;
+      font-size: 0.7rem;
       margin-bottom: 0.5rem;
     }
   }
-
-
   
+  .App__body {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+  }
+
+  .App__footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #efefef;
+    padding-top: 1rem;
+
+    button {
+      border: 0;
+      outline: 0;
+      background-color: white;
+      font-size: 0.825rem;
+      padding: 1rem;
+      display: block;
+      color: #2c3e50;
+      cursor: pointer;
+
+      &:hover {
+        color: salmon
+      }
+    }
+  }
 }

@@ -1,15 +1,16 @@
 .CreditCard {
   max-width: 450px;
+  height: 260px;
   border-radius: 10px;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 1.2rem;
   background: linear-gradient(135deg, #bd6772, #53223f);
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
   color: white;
   font-family: monospace;
   display: grid;
-  grid-row: repeat(3, 1fr);
+  grid-template-rows: 30px 1fr 40px;
   position: relative;
+  align-items: baseline;
 
   &::before {
     background: url('https://image.flaticon.com/icons/svg/44/44386.svg') no-repeat center;
@@ -23,12 +24,7 @@
     left: 0;
   }
 
-  & > div {
-    padding: 1.3rem 0.5rem;
-  }
-
   .CreditCard__header {
-    margin-bottom: 0.8rem;
     padding: 0;
     position: relative;
     display: grid;
@@ -72,6 +68,10 @@
     text-align: center;
     letter-spacing: 1px;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 
     span:nth-child(4n) {
       margin-right: 1ch;
@@ -81,16 +81,17 @@
   .CreditCard__details {
     display: grid;
     padding: 0 inherit;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: 66% 33%; 
 
     .title {
-      color: rgba(white, 0.7);
-      font-size: 0.8rem;
+      color: rgba(white, 0.8);
+      font-size: 0.75rem;
       display: block;
       margin-bottom: 3px;
+      text-transform: uppercase;
     }
     .value {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);    
     }
 
