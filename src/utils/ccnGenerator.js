@@ -1,11 +1,11 @@
 export function ccngen(type) {
   let temp;
 
-  if (type === 'VISA') {
+  if (type === 'Visa') {
     temp = '4xxx xxxx xxxx xxxx';
   } else if (type === 'Mastercard') {
     temp = '5yxx xxxx xxxx xxxx';
-  } else if (type === 'American Express') {
+  } else if (type === 'amex') {
     temp = '3yxx xxxxxx xxxxx';
   }
 
@@ -19,9 +19,9 @@ export function ccngen(type) {
 export function cvvgen(type) {
   let cvv = '';
 
-  if (type === 'VISA' || type === 'Mastercard') {
+  if (type === 'Visa' || type === 'Mastercard') {
     cvv = ('00' + Math.floor(Math.random() * 999)).slice(-3);
-  } else if (type === 'American Express') {
+  } else if (type === 'amex') {
     cvv = ('000' + Math.floor(Math.random() * 9999)).slice(-4)
   }
 

@@ -3,11 +3,11 @@ import React from 'react';
 import './CreditCard.scss';
 
 const ccLogo = (type) => {
-  if (type === 'VISA') {
-    return <i className="fa fa-cc-visa"></i>
+  if (type === 'Visa') {
+    return <i className="fa fa-cc-Visa"></i>
   } else if (type === 'Mastercard') {
     return <i className="fa fa-cc-mastercard"></i>    
-  } else if (type === 'American Express') {
+  } else if (type === 'amex') {
     return <i className="fa fa-cc-amex"></i>
   }
 }

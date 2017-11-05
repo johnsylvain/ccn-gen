@@ -12,7 +12,7 @@ class App extends Component {
     super();
 
     this.state = {
-      cardType: 'VISA',
+      cardType: 'Visa',
       cardDetails: {
         ccn: null,
         exp: null,
@@ -71,9 +71,9 @@ class App extends Component {
           </div>
         </div>
         <div className="App__footer">
-          <Button value="Generate Visa" onClick={this._handleClick('VISA')}/>
+          <Button value="Generate Visa" onClick={this._handleClick('Visa')}/>
           <Button value="Generate Mastercard" onClick={this._handleClick('Mastercard')}/>
-          <Button value="Generate American Express" onClick={this._handleClick('American Express')}/>
+          <Button value="Generate American Express" onClick={this._handleClick('amex')}/>
         </div>
       </div>
     </div>
