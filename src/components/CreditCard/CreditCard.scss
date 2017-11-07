@@ -24,6 +24,30 @@
     left: 0;
   }
 
+  .CreditCard__chip {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    background: linear-gradient(135deg, hsl(269,54%,87%) 0%,hsl(200,64%,89%) 44%,hsl(18,55%,94%) 100%);;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: 4px solid hsla(0, 0, 50, .1);
+      width: 70%;
+      height: 60%;
+      border-radius: 5px;
+    }
+  }
+  
   .CreditCard__header {
     padding: 0;
     position: relative;
@@ -34,29 +58,6 @@
       text-align: right;
     }
 
-    .chip {
-      position: absolute;
-      width: 60px;
-      height: 45px;
-      background: linear-gradient(135deg, hsl(269,54%,87%) 0%,hsl(200,64%,89%) 44%,hsl(18,55%,94%) 100%);;
-      border-radius: 8px;
-      top: 0;
-      left: 0;
-  
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border: 4px solid hsla(0, 0, 50, .1);
-        width: 70%;
-        height: 60%;
-        border-radius: 5px;
-      }
-    }
 
     i {
       font-size: 1.7rem;

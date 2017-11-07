@@ -4,7 +4,7 @@ import './CreditCard.scss';
 
 const ccLogo = (type) => {
   if (type === 'Visa') {
-    return <i className="fa fa-cc-Visa"></i>
+    return <i className="fa fa-cc-visa"></i>
   } else if (type === 'Mastercard') {
     return <i className="fa fa-cc-mastercard"></i>    
   } else if (type === 'amex') {
@@ -26,7 +26,7 @@ const CreditCard = ({ details, type }) =>
   <div className="CreditCard">
     <div className="CreditCard__header">
       <div>
-        <div className="chip"></div>
+        <div className="CreditCard__chip"></div>
       </div>
       <div className="CreditCard__header--right">
         {ccLogo(type)}
