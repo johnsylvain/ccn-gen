@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b19d477420137fddc874"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "41919d0df6d8aefb817d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -840,7 +840,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, ".CreditCard{max-width:450px;height:260px;border-radius:10px;padding:1.2rem;background:linear-gradient(135deg,#bd6772,#53223f);box-shadow:0 4px 20px -2px rgba(0,0,0,.2);color:#fff;font-family:monospace;display:grid;grid-template-rows:30px 1fr 40px;position:relative;align-items:baseline}.CreditCard:before{background:url(\"https://image.flaticon.com/icons/svg/44/44386.svg\") no-repeat 50%;background-size:cover;opacity:.05;content:\"\";position:absolute;width:100%;height:100%;top:0;left:0}.CreditCard .CreditCard__header{padding:0;position:relative;display:grid;grid-template-columns:repeat(2,1fr)}.CreditCard .CreditCard__header .CreditCard__header--right{text-align:right}.CreditCard .CreditCard__header .chip{position:absolute;width:60px;height:45px;background:linear-gradient(135deg,#ddccf0,#d1e9f5 44%,#f8ece7);border-radius:8px;top:0;left:0}.CreditCard .CreditCard__header .chip:before{content:\"\";position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;border:4px solid hsla(0,0%,50%,.1);width:70%;height:60%;border-radius:5px}.CreditCard .CreditCard__header i{font-size:1.7rem}.CreditCard .CreditCard__ccn{font-size:1.9rem;text-align:center;letter-spacing:1px;text-shadow:0 2px 0 rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;height:100%}.CreditCard .CreditCard__ccn span:nth-child(4n){margin-right:1ch}.CreditCard .CreditCard__details{display:grid;padding:0 inherit;grid-template-columns:66% 33%}.CreditCard .CreditCard__details .title{color:hsla(0,0%,100%,.8);font-size:.75rem;display:block;margin-bottom:3px;text-transform:uppercase}.CreditCard .CreditCard__details .value{font-size:1.3rem;text-shadow:0 1px 0 rgba(0,0,0,.2)}.CreditCard .CreditCard__details .CreditCard__details--right{text-align:right}", ""]);
+exports.push([module.i, ".CreditCard{max-width:450px;height:260px;border-radius:10px;padding:1.2rem;background:linear-gradient(135deg,#bd6772,#53223f);box-shadow:0 4px 20px -2px rgba(0,0,0,.2);color:#fff;font-family:monospace;display:grid;grid-template-rows:30px 1fr 40px;position:relative;align-items:baseline}.CreditCard:before{background:url(\"https://image.flaticon.com/icons/svg/44/44386.svg\") no-repeat 50%;background-size:cover;opacity:.05;content:\"\";position:absolute;width:100%;height:100%;top:0;left:0}.CreditCard .CreditCard__chip{position:absolute;width:60px;height:45px;background:linear-gradient(135deg,#ddccf0,#d1e9f5 44%,#f8ece7);border-radius:8px;top:0;left:0}.CreditCard .CreditCard__chip:before{content:\"\";position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;border:4px solid hsla(0,0%,50%,.1);width:70%;height:60%;border-radius:5px}.CreditCard .CreditCard__header{padding:0;position:relative;display:grid;grid-template-columns:repeat(2,1fr)}.CreditCard .CreditCard__header .CreditCard__header--right{text-align:right}.CreditCard .CreditCard__header i{font-size:1.7rem}.CreditCard .CreditCard__ccn{font-size:1.9rem;text-align:center;letter-spacing:1px;text-shadow:0 2px 0 rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;height:100%}.CreditCard .CreditCard__ccn span:nth-child(4n){margin-right:1ch}.CreditCard .CreditCard__details{display:grid;padding:0 inherit;grid-template-columns:66% 33%}.CreditCard .CreditCard__details .title{color:hsla(0,0%,100%,.8);font-size:.75rem;display:block;margin-bottom:3px;text-transform:uppercase}.CreditCard .CreditCard__details .value{font-size:1.3rem;text-shadow:0 1px 0 rgba(0,0,0,.2)}.CreditCard .CreditCard__details .CreditCard__details--right{text-align:right}", ""]);
 
 // exports
 
@@ -11702,7 +11702,7 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      cardType: 'VISA',
+      cardType: 'Visa',
       cardDetails: {
         ccn: null,
         exp: null,
@@ -11813,9 +11813,9 @@ var App = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'App__footer' },
-            _react2.default.createElement(_Button2.default, { value: 'Generate Visa', onClick: this._handleClick('VISA') }),
+            _react2.default.createElement(_Button2.default, { value: 'Generate Visa', onClick: this._handleClick('Visa') }),
             _react2.default.createElement(_Button2.default, { value: 'Generate Mastercard', onClick: this._handleClick('Mastercard') }),
-            _react2.default.createElement(_Button2.default, { value: 'Generate American Express', onClick: this._handleClick('American Express') })
+            _react2.default.createElement(_Button2.default, { value: 'Generate American Express', onClick: this._handleClick('amex') })
           )
         )
       );
@@ -32329,11 +32329,11 @@ __webpack_require__(165);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ccLogo = function ccLogo(type) {
-  if (type === 'VISA') {
+  if (type === 'Visa') {
     return _react2.default.createElement('i', { className: 'fa fa-cc-visa' });
   } else if (type === 'Mastercard') {
     return _react2.default.createElement('i', { className: 'fa fa-cc-mastercard' });
-  } else if (type === 'American Express') {
+  } else if (type === 'amex') {
     return _react2.default.createElement('i', { className: 'fa fa-cc-amex' });
   }
 };
@@ -32360,7 +32360,7 @@ var CreditCard = function CreditCard(_ref) {
       _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('div', { className: 'chip' })
+        _react2.default.createElement('div', { className: 'CreditCard__chip' })
       ),
       _react2.default.createElement(
         'div',
@@ -32548,38 +32548,102 @@ module.exports = function (css) {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 exports.ccngen = ccngen;
 exports.cvvgen = cvvgen;
 function ccngen(type) {
-  var temp = void 0;
+	var pos = void 0;
+	var str = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	var sum = 0;
+	var final_digit = 0;
+	var i = 0;
+	var t = 0;
+	var len_offset = 0;
+	var len = 0;
+	var templates = {
+		'Visa': 'xxxx xxxx xxxx xxxx',
+		'Mastercard': 'xxxx xxxx xxxx xxxx',
+		'amex': 'xxxx xxxxxx xxxxx'
 
-  if (type === 'VISA') {
-    temp = '4xxx xxxx xxxx xxxx';
-  } else if (type === 'Mastercard') {
-    temp = '5yxx xxxx xxxx xxxx';
-  } else if (type === 'American Express') {
-    temp = '3yxx xxxxxx xxxxx';
-  }
+		//
+		// Fill in the first values of the string based with the specified bank's prefix.
+		//
 
-  return temp.replace(/[xy]/g, function (c) {
-    var r = Math.random() * 10 | 0,
-        v = c === 'x' ? r : type === 'Mastercard' ? Math.random() * 5 | 0 : [4, 7][Math.random() * 2 | 0];
-    return v;
-  });
+		// Visa
+	};if (type === 'Visa') {
+		str[0] = 4;
+		pos = 1;
+		len = 16;
+	}
+	// Mastercard
+	else if (type === 'Mastercard') {
+			str[0] = 5;
+			t = Math.floor(Math.random() * 5) % 5;
+			str[1] = 1 + t; // Between 1 and 5.
+			pos = 2;
+			len = 16;
+		}
+		// American Express
+		else if (type === 'amex') {
+				str[0] = 3;
+				t = Math.floor(Math.random() * 4) % 4;
+				str[1] = 4 + t; // Between 4 and 7.
+				pos = 2;
+				len = 15;
+			}
+
+	//
+	// Fill all the remaining numbers except for the last one with random values.
+	//
+
+	while (pos < len - 1) {
+		str[pos++] = Math.floor(Math.random() * 10) % 10;
+	}
+
+	//
+	// Calculate the Luhn checksum of the values thus far.
+	//
+
+	len_offset = (len + 1) % 2;
+	for (pos = 0; pos < len - 1; pos++) {
+		if ((pos + len_offset) % 2) {
+			t = str[pos] * 2;
+			if (t > 9) {
+				t -= 9;
+			}
+			sum += t;
+		} else {
+			sum += str[pos];
+		}
+	}
+
+	//
+	// Choose the last digit so that it causes the entire string to pass the checksum.
+	//
+
+	final_digit = (10 - sum % 10) % 10;
+	str[len - 1] = final_digit;
+
+	//
+	// Fill out template
+	//
+
+	return templates[type].replace(/[x]/g, function () {
+		return str[i++];
+	});
 }
 
 function cvvgen(type) {
-  var cvv = '';
+	var cvv = '';
 
-  if (type === 'VISA' || type === 'Mastercard') {
-    cvv = ('00' + Math.floor(Math.random() * 999)).slice(-3);
-  } else if (type === 'American Express') {
-    cvv = ('000' + Math.floor(Math.random() * 9999)).slice(-4);
-  }
+	if (type === 'Visa' || type === 'Mastercard') {
+		cvv = ('00' + Math.floor(Math.random() * 999)).slice(-3);
+	} else if (type === 'amex') {
+		cvv = ('000' + Math.floor(Math.random() * 9999)).slice(-4);
+	}
 
-  return cvv;
+	return cvv;
 }
 
 /***/ }),
