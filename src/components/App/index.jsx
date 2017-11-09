@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import faker from 'faker/locale/en';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Notification } from 'react-notification';
 
 import CreditCard from '../CreditCard';
 import { ccngen, cvvgen } from '../../utils/ccnGenerator';
@@ -12,6 +14,10 @@ class App extends Component {
     super();
 
     this.state = {
+      notification: {
+        showing: false,
+        title: ''
+      },
       cardType: 'Visa',
       cardDetails: {
         ccn: null,
@@ -23,6 +29,7 @@ class App extends Component {
 
     this._generateCard = this._generateCard.bind(this);
     this._handleClick = this._handleClick.bind(this);
+    this._handleCopy = this._handleCopy.bind(this);
   }
 
   _generateCard(type) {
@@ -48,12 +55,35 @@ class App extends Component {
     }
   }
 
+  _handleCopy(type) {
+    this.setState({
+      notification: {
+        showing: true,
+        title: `Copied ${type}!`
+      }
+    })
+  }
+
   componentWillMount() {
     this._generateCard(this.state.cardType);
   }
 
   render() {
     return <div className="container">
+      <Notification 
+        isActive={this.state.notification.showing}
+        message={this.state.notification.title}
+        barStyle={{
+          fontSize: '11px',
+          opacity: 0.8
+        }}
+        onDismiss={() => this.setState({ 
+          notification: { showing: false } 
+        })}
+        onClick={() => this.setState({ 
+          notification: { showing: false } 
+        })}
+      />
       <div className="App">
         <div className="App__body">
           <div className="App__CC">
@@ -61,13 +91,21 @@ class App extends Component {
           </div>
           <div className="App__sidebar">
             <h3>Credit Card Number</h3>
-            <pre>{this.state.cardDetails.ccn}</pre>
+            <CopyToClipboard text={this.state.cardDetails.ccn.replace(/ /g, '')} onCopy={this._handleCopy.bind(this, 'Credit Card Number')}>
+              <pre>{this.state.cardDetails.ccn.replace(/ /g, '')}</pre>
+            </CopyToClipboard>
             <h3>Card Holder</h3>
-            <pre>{this.state.cardDetails.name}</pre>
+            <CopyToClipboard text={this.state.cardDetails.name} onCopy={this._handleCopy.bind(this, 'Card Holder')}>
+              <pre>{this.state.cardDetails.name}</pre>
+            </CopyToClipboard>
             <h3>Expiration Date</h3>
-            <pre>{this.state.cardDetails.exp}</pre>          
+            <CopyToClipboard text={this.state.cardDetails.exp} onCopy={this._handleCopy.bind(this, 'Expiration Date')}>
+              <pre>{this.state.cardDetails.exp}</pre>          
+            </CopyToClipboard>
             <h3>CCV</h3>
-            <pre>{this.state.cardDetails.cvv}</pre>          
+            <CopyToClipboard text={this.state.cardDetails.cvv} onCopy={this._handleCopy.bind(this, 'CVV')}>
+              <pre>{this.state.cardDetails.cvv}</pre>          
+            </CopyToClipboard>
           </div>
         </div>
         <div className="App__footer">
